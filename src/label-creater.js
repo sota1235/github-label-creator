@@ -1,13 +1,13 @@
 /**
- * @fileoverview GitHub issue creater.
+ * @fileoverview GitHub label creater.
  */
 
 import $ from 'jquery';
 
 // TODO: check the URL
 
-/** @var {array} issues - Issue list. */
-const issues = [
+/** @var {array} labels - Label list. */
+const labels = [
   {
     name: 'bug',
     color: 'e99695',
@@ -39,17 +39,17 @@ const issues = [
 ];
 
 /**
- * @description Count the issues displayed.
+ * @description Count the labels displayed.
  * @return {$}
  */
-const getDisplayedIssues = () => $('.js-details-container.labels-list-item');
+const getDisplayedLabels = () => $('.js-details-container.labels-list-item');
 
 /**
- * @description Create new issue.
+ * @description Create new label.
  * @param {string} labelName
  * @param {string} colorCode
  */
-const createNewIssue = (labelName, colorCode = '') => {
+const createNewLabel = (labelName, colorCode = '') => {
   $('.subnav > button').trigger('click');
 
   $('.label-edit-name').val(labelName);
@@ -61,7 +61,7 @@ const createNewIssue = (labelName, colorCode = '') => {
 };
 
 // Remove all default labels.
-getDisplayedIssues().each((index, elm) => {
+getDisplayedLabels().each((index, elm) => {
   const deleteIcon   = $(elm).find('.labels-list-action.js-details-target');
   const deleteButton = $(elm).find('.js-delete-label > button');
   // Click delete icon.
@@ -70,8 +70,8 @@ getDisplayedIssues().each((index, elm) => {
   deleteButton.trigger('click');
 });
 
-for (let i in issues) {
-  const issue = issues[i];
-  const { name, color } = issue;
-  createNewIssue(name, color);
+for (let i in labels) {
+  const label = labels[i];
+  const { name, color } = label;
+  createNewLabel(name, color);
 }

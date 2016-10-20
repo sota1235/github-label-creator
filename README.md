@@ -1,4 +1,4 @@
-GitHub issue creater
+GitHub label creater
 ====
 
 After you created new repository, then create your own labels.
