@@ -2,7 +2,7 @@
  * @fileoverview GitHub issue creater.
  */
 
-import $ from 'jquery'
+import $ from 'jquery';
 
 // TODO: check the URL
 
@@ -20,4 +20,4 @@ getDisplayedIssues().each((index, elm) => {
   deleteIcon.trigger('click');
   // Click delete label button.
   deleteButton.trigger('click');
-})
+});
