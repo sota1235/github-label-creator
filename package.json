@@ -2,8 +2,8 @@
   "private": true,
   "name": "github-issue-creater",
   "scripts": {
-    "build": "babel src --out-dir dest --source-maps-inline",
-    "watch": "babel src --out-dir dest --watch --source-maps-inline",
+    "build": "babel src --out-dir dist --source-maps-inline",
+    "watch": "babel src --out-dir dist --watch --source-maps-inline",
     "lint": "eslint src/"
   },
   "devDependencies": {
