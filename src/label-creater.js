@@ -4,40 +4,6 @@
 
 import $ from 'jquery';
 
-// TODO: check the URL
-
-/** @var {array} labels - Label list. */
-const labels = [
-  {
-    name: 'bug',
-    color: 'e99695',
-  },
-  {
-    name: 'design',
-    color: 'fef2c0',
-  },
-  {
-    name: 'feature',
-    color: 'c2e0c6',
-  },
-  {
-    name: 'for development',
-    color: 'f9d0c4',
-  },
-  {
-    name: 'improvement',
-    color: 'c5def5',
-  },
-  {
-    name: 'incompatible',
-    color: 'ffffff',
-  },
-  {
-    name: 'release',
-    color: 'd4c5f9',
-  },
-];
-
 /**
  * @description Count the labels displayed.
  * @return {$}
@@ -60,18 +26,31 @@ const createNewLabel = (labelName, colorCode = '') => {
   $('.new-label-actions').find('.btn.btn-primary').trigger('click');
 };
 
-// Remove all default labels.
-getDisplayedLabels().each((index, elm) => {
-  const deleteIcon   = $(elm).find('.labels-list-action.js-details-target');
-  const deleteButton = $(elm).find('.js-delete-label > button');
-  // Click delete icon.
-  deleteIcon.trigger('click');
-  // Click delete label button.
-  deleteButton.trigger('click');
-});
+/**
+ * @description Create new labels.
+ * @param {array} labels
+ */
+const createNewLabels = labels => {
+  for (let i in labels) {
+    const label = labels[i];
+    const { name, color } = label;
+    createNewLabel(name, color);
+  }
+};
 
-for (let i in labels) {
-  const label = labels[i];
-  const { name, color } = label;
-  createNewLabel(name, color);
-}
+/**
+ * @description Delete all labels.
+ */
+const deleteLabels = () => {
+  // Remove all default labels.
+  getDisplayedLabels().each((index, elm) => {
+    const deleteIcon   = $(elm).find('.labels-list-action.js-details-target');
+    const deleteButton = $(elm).find('.js-delete-label > button');
+    // Click delete icon.
+    deleteIcon.trigger('click');
+    // Click delete label button.
+    deleteButton.trigger('click');
+  });
+};
+
+export default { createNewLabels, deleteLabels }
