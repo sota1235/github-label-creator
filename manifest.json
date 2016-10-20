@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub label creater",
+  "version": "0.0.1",
+  "default_locale": "en",
+
+  "description": "Create labels of GitHub.",
+
+  "page_action": {
+    "default_icon": {
+    },
+    "default_title": "GitHub label creater",
+    "default_popup": "popup.html"
+  },
+
+  "author": "sota1235"
+}
