@@ -6,6 +6,38 @@ import $ from 'jquery';
 
 // TODO: check the URL
 
+/** @var {array} issues - Issue list. */
+const issues = [
+  {
+    name: 'bug',
+    color: 'e99695',
+  },
+  {
+    name: 'design',
+    color: 'fef2c0',
+  },
+  {
+    name: 'feature',
+    color: 'c2e0c6',
+  },
+  {
+    name: 'for development',
+    color: 'f9d0c4',
+  },
+  {
+    name: 'improvement',
+    color: 'c5def5',
+  },
+  {
+    name: 'incompatible',
+    color: 'ffffff',
+  },
+  {
+    name: 'release',
+    color: 'd4c5f9',
+  },
+];
+
 /**
  * @description Count the issues displayed.
  * @return {$}
@@ -37,3 +69,9 @@ getDisplayedIssues().each((index, elm) => {
   // Click delete label button.
   deleteButton.trigger('click');
 });
+
+for (let i in issues) {
+  const issue = issues[i];
+  const { name, color } = issue;
+  createNewIssue(name, color);
+}
