@@ -6,7 +6,7 @@
 
   "description": "Create labels of GitHub.",
 
-  "page_action": {
+  "browser_action": {
     "default_icon": {
     },
     "default_title": "GitHub label creater",
