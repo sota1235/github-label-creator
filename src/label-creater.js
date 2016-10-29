@@ -53,4 +53,4 @@ const deleteLabels = () => {
   });
 };
 
-export default { createNewLabels, deleteLabels }
+export { createNewLabels, deleteLabels }
