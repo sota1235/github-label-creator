@@ -12,5 +12,14 @@
     "default_popup": "popup.html"
   },
 
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/*/labels"
+      ],
+      "js": ["dist/index.js"]
+    }
+  ],
+
   "author": "sota1235"
 }
