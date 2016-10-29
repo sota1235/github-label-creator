@@ -9,7 +9,6 @@ import { createNewLabels, deleteLabels } from './label-creater';
 
 domready(() => {
   // const issues = get('issues');
-  console.log('js loaded');
 
   /** @var {array} labels - Label list. */
   const labels = [
@@ -44,10 +43,9 @@ domready(() => {
   ];
 
   chrome.runtime.onMessage.addListener(message => {
-    console.log(message);
     if (message === Constants.CLICK) {
       deleteLabels();
-      createNewLabels(issues);
+      createNewLabels(labels);
     }
   });
 });

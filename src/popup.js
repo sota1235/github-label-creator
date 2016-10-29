@@ -8,6 +8,8 @@ import Constants from './constants';
 
 domready(() => {
   $('button.create-labels').on('click', () => {
-    chrome.runtime.sendMessage(Constants.CLICK);
+    chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+      chrome.tabs.sendMessage(tabs[0].id, Constants.CLICK);
+    });
   });
 });
