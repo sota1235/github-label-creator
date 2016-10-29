@@ -2,10 +2,9 @@
   "private": true,
   "name": "github-issue-creater",
   "scripts": {
-    "build": "babel src --out-dir dist --source-maps-inline",
-    "watch": "babel src --out-dir dist --watch --source-maps-inline",
-    "lint": "eslint src/ --fix",
-    "compress": "webpack"
+    "build": "webpack",
+    "watch": "webpack --progress --colors --watch",
+    "lint": "eslint src/ --fix"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
