@@ -1,10 +1,13 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'index': './src/index.js',
+    'popup': './src/popup.js',
+  },
   output: {
     path: './dist',
-    filename: 'index.js',
+    filename: '[name].js',
   },
   module: {
     loaders: [
