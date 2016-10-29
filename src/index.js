@@ -1,14 +1,15 @@
 /**
- * @fileoverview Main file for popup html.
+ * @fileoverview Content script for GitHub page.
  */
 
-import $ from 'jquery';
 import domready from 'domready';
+import Constants from './constants';
 import { get, put } from './storage';
 import { createNewLabels, deleteLabels } from './label-creater';
 
 domready(() => {
   // const issues = get('issues');
+  console.log('js loaded');
 
   /** @var {array} labels - Label list. */
   const labels = [
@@ -42,8 +43,11 @@ domready(() => {
     },
   ];
 
-  $('button.create-labels').on('click', () => {
-    deleteLabels();
-    createNewLabels(issues);
+  chrome.runtime.onMessage.addListener(message => {
+    console.log(message);
+    if (message === Constants.CLICK) {
+      deleteLabels();
+      createNewLabels(issues);
+    }
   });
 });
