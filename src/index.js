@@ -2,6 +2,7 @@
  * @fileoverview Main file for popup html.
  */
 
+import $ from 'jquery';
 import domready from 'domready';
 import { get, put } from './storage';
 import { createNewLabels, deleteLabels } from './label-creater';
