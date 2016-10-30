@@ -1,4 +1,3 @@
 {
-  "presets": ["es2015", "es2016", "stage-3", "react"],
-  "plugins": ["react-display-name"]
+  "presets": ["es2015", "es2016", "stage-3", "react"]
 }
