@@ -1,4 +1,7 @@
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var path = require('path');
 
 module.exports = {
   entry: {
@@ -19,6 +22,8 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
+
     new webpack.optimize.UglifyJsPlugin({
       debug: false,
       minimize: true,
@@ -29,5 +34,17 @@ module.exports = {
         warnings: false,
       },
     }),
+
+    new CopyWebpackPlugin([
+      {
+        context: 'node_modules/semantic-ui/dist',
+        from: '*.min.*',
+      },
+      {
+        context: 'node_modules/semantic-ui/dist/themes/default/assets/fonts',
+        from: 'icons.*',
+        to: 'themes/default/assets/fonts',
+      }
+    ]),
   ],
 };
