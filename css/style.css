@@ -1,3 +1,31 @@
 h1.ui.center.aligned.header {
   margin: 20px;
 }
+
+ul.github-label-list {
+  display: table;
+  width: 100%;
+  list-style: none;
+}
+
+li.github-label-item {
+  padding: 8px 10px;
+  border: 1px solid #eee;
+}
+
+i.icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+div.github-label {
+  display: inline-block;
+  background-color: #e99695;
+  color: #332020;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  line-height: 2;
+}
