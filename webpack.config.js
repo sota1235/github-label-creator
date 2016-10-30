@@ -40,6 +40,11 @@ module.exports = {
         context: 'node_modules/semantic-ui/dist',
         from: '*.min.*',
       },
+      {
+        context: 'node_modules/semantic-ui/dist/themes/default/assets/fonts',
+        from: 'icons.*',
+        to: 'themes/default/assets/fonts',
+      }
     ]),
   ],
 };
