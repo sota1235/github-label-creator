@@ -6,6 +6,7 @@ ul.github-label-list {
   display: table;
   width: 100%;
   list-style: none;
+  padding: 0px;
 }
 
 li.github-label-item {
