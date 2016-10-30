@@ -8,7 +8,11 @@ import { createNewLabels, deleteLabels } from './label-creater';
 
 domready(() => {
   chrome.runtime.onMessage.addListener(message => {
-    if (message.type === Constants.CLICK) {
+    if (message.type !== Constants.CLICK) {
+      return;
+    }
+
+    if (window.confirm('All labels will be overwritten. Are you OK?')) {
       deleteLabels();
       createNewLabels(message.labels);
     }
