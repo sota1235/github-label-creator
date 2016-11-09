@@ -7,7 +7,7 @@ After you created new repository, then create your own labels.
 
 Bookmarklet for creating issue labels of GitHub.
 
-![Capture of GitHub issue creater]()
+![Capture of GitHub issue creater](https://i.gyazo.com/7f8cc3099c5916762bab35e2be56a236.gif)
 
 ### Requirement
 
@@ -15,9 +15,15 @@ Nothing. You need to add bookmarklet.
 
 ### Usage
 
+Click the extension icon, then you can create labels with clicking button!!
+
 ### Install
 
+Download this repository's source and load to your chrome.
+
 ### Contribution
+
+Give me the Pull Request :)
 
 ### Licence
 
