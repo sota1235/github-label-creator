@@ -21,5 +21,13 @@
     }
   ],
 
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "https://github.com/*/*/labels", "tabs", "webNavigation"
+  ],
+
   "author": "sota1235"
 }
