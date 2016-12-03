@@ -11,7 +11,7 @@ Bookmarklet for creating issue labels of GitHub.
 
 ### Requirement
 
-Nothing. You need to add bookmarklet.
+Nothing. You can use it with Chrome.
 
 ### Usage
 
@@ -19,7 +19,7 @@ Click the extension icon, then you can create labels with clicking button!!
 
 ### Install
 
-Download this repository's source and load to your chrome.
+Download this repository's source and load extension to your chrome.
 
 ### Contribution
 
