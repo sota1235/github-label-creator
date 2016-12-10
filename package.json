@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "github-issue-creater",
+  "name": "github-issue-creator",
   "scripts": {
     "build": "webpack",
     "watch": "webpack --progress --colors --watch",

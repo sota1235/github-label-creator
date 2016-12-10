@@ -1,5 +1,5 @@
 /**
- * @fileoverview GitHub label creater.
+ * @fileoverview GitHub label creator.
  */
 
 import $ from 'jquery';

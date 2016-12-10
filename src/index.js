@@ -4,7 +4,7 @@
 
 import domready from 'domready';
 import Constants from './constants';
-import { createNewLabels, deleteLabels } from './label-creater';
+import { createNewLabels, deleteLabels } from './label-creator';
 
 domready(() => {
   chrome.runtime.onMessage.addListener(message => {

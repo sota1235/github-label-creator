@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "GitHub label creater",
+  "name": "GitHub label creator",
   "version": "0.0.1",
 
   "description": "Create labels of GitHub.",
@@ -8,7 +8,7 @@
   "browser_action": {
     "default_icon": {
     },
-    "default_title": "GitHub label creater",
+    "default_title": "GitHub label creator",
     "default_popup": "popup.html"
   },
 

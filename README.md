@@ -1,4 +1,4 @@
-GitHub label creater
+GitHub label creator
 ====
 
 After you created new repository, then create your own labels.
@@ -7,7 +7,7 @@ After you created new repository, then create your own labels.
 
 Bookmarklet for creating issue labels of GitHub.
 
-![Capture of GitHub issue creater](https://i.gyazo.com/7f8cc3099c5916762bab35e2be56a236.gif)
+![Capture of GitHub issue creator](https://i.gyazo.com/7f8cc3099c5916762bab35e2be56a236.gif)
 
 ### Requirement
 
