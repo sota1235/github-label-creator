@@ -1,1 +1,1 @@
-console.log("this is extension script");
+console.log('this is extension script');

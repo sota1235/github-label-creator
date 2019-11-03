@@ -1,1 +1,1 @@
-console.log("this is popup page");
+console.log('this is popup page');
