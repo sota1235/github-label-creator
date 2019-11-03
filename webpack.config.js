@@ -1,50 +1,24 @@
-var webpack = require('webpack');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   entry: {
-    'index': './src/index.js',
-    'popup': './src/popup.js',
-  },
-  output: {
-    path: './dist',
-    filename: '[name].js',
+    index: './src/index.ts',
+    popup: './src/popup.ts',
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        loader: 'babel',
       },
-    ]
+    ],
   },
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-
-    new webpack.optimize.UglifyJsPlugin({
-      debug: false,
-      minimize: true,
-      output: {
-        comments: false,
-      },
-      compressor: {
-        warnings: false,
-      },
-    }),
-
-    new CopyWebpackPlugin([
-      {
-        context: 'node_modules/semantic-ui/dist',
-        from: '*.min.*',
-      },
-      {
-        context: 'node_modules/semantic-ui/dist/themes/default/assets/fonts',
-        from: 'icons.*',
-        to: 'themes/default/assets/fonts',
-      }
-    ]),
-  ],
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ],
+  },
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+  },
 };
